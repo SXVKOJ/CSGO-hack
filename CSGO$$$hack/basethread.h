@@ -1,4 +1,5 @@
 #pragma once
+#include <Windows.h>
 
 #ifndef CSGO$$$HACK_BASETHREAD_H_
 #define CSGO$$$HACK_BASETHREAD_H_
@@ -20,11 +21,13 @@ namespace basethread
 	class C_Thread
 	{
 	private:
+		HMODULE hModule;
 		ThreadState state;
 	public:
-		void run();
+		void run(HMODULE hModule);
 		void stop();
 	private:
+		uintptr_t __stdcall mainthread();
 		// вызывает keyboardHandler
 		void initKeyboardHandler();
 		// Вызывает функции модулей чита
@@ -32,7 +35,7 @@ namespace basethread
 		void callModuleMethods();
 		// отвечает за обработку нажатий на горячие клавиши
 		// определен в keyboardhandler.cpp
-		void keyboardHandler();
+		uintptr_t __stdcall keyboardHandler();
 	public:
 		C_Thread();
 	};

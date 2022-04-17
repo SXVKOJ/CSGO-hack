@@ -9,7 +9,7 @@
 // задержка ядра для оптимизации (больше - быстрее, меньше - стабильнее)
 #define THREAD_DELAY MIL_SECOND // in milliseconds
 
-void
+uintptr_t __stdcall
 basethread::C_Thread::keyboardHandler() {
 	while (state == ThreadState::running) {
 		if (GetAsyncKeyState(ESCAPE_KEY)) {
@@ -18,4 +18,6 @@ basethread::C_Thread::keyboardHandler() {
 
 		Sleep(THREAD_DELAY);
 	}
+
+	FreeLibraryAndExitThread(hModule, 0);
 }

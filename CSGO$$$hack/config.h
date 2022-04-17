@@ -6,7 +6,6 @@
 namespace config
 {
 	namespace glowesp {
-		// моя команда
 		namespace lpteam {
 			extern float color[3];
 			extern float alpha;
@@ -15,7 +14,6 @@ namespace config
 			extern float* g;
 			extern float* b;
 		}
-		// команда противника
 		namespace enteam {
 			extern float color[3];
 			extern float alpha;
