@@ -16,7 +16,7 @@ basethread::C_Thread::initKeyboardHandler() {
 
 void
 basethread::C_Thread::run() {
-	initKeyboardHandler();
+	//initKeyboardHandler()
 	// TODO: поместить этот блок в хук функции обновления кадра
 	while (state == ThreadState::running) {
 		callModuleMethods();

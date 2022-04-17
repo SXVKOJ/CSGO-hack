@@ -13,9 +13,11 @@
 
 void
 glowesp::update() {
-	int lpteam = *(int*)(CLIENT + offsets::dwLocalPlayer);
-	uintptr_t glowManager = *(uintptr_t*)(ENGINE + offsets::dwGlowObjectManager);
-	uintptr_t entitylist = *(uintptr_t*)(CLIENT + offsets::dwEntityList);
+	int localplayer = *(int*)(CLIENT + offsets::dwLocalPlayer);
+	int lpteam = *(int*)(localplayer + offsets::m_iTeamNum);
+	
+	uintptr_t glowManager = *(uintptr_t*)(CLIENT + offsets::dwGlowObjectManager);
+	uintptr_t entitylist  = *(uintptr_t*)(CLIENT + offsets::dwEntityList);
 
 	for (int i = PLAYER_START; i < PLAYERS_MAX; i++) {
 		uintptr_t entity = *(uintptr_t*)(entitylist + i * PLAYER_SIZE);
@@ -46,7 +48,7 @@ glowesp::update() {
 			*(float*)(glowManager + (entityGlowIndex * PLAYER_SIZE) + 0x14) = config::glowesp::enteam::alpha;
 		}
 
-		*(bool*)(entity + m_bRenderWhenOccluded(entityGlowIndex)) = TRUE;
+		*(bool*)(entity + m_bRenderWhenOccluded(entityGlowIndex))   = TRUE;
 		*(bool*)(entity + m_bRenderWhenUnoccluded(entityGlowIndex)) = FALSE;
 	}
 }
