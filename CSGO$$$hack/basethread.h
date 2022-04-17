@@ -22,17 +22,17 @@ namespace basethread
 	private:
 		ThreadState state;
 	public:
-		virtual void run();
-		virtual void stop();
+		void run();
+		void stop();
 	private:
 		// вызывает keyboardHandler
-		virtual void initKeyboardHandler();
+		void initKeyboardHandler();
 		// Вызывает функции модулей чита
 		// определен в callmodulemethods.cpp
-		virtual void callModuleMethods();
+		void callModuleMethods();
 		// отвечает за обработку нажатий на горячие клавиши
 		// определен в keyboardhandler.cpp
-		virtual void keyboardHandler();
+		void keyboardHandler();
 	public:
 		C_Thread();
 	};
