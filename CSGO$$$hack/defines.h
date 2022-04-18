@@ -8,6 +8,8 @@
 #define CSGO$$$HACK_VERSION_MAJOR 1
 #define CSGO$$$HACK_DEBUG 1
 
+#define PRINTDEBUG(_message) if (CSGO$$$HACK_DEBUG) {std::cout << _message << endl;}
+
 // операторы pystyle
 #define is  ==
 #define and &&
@@ -16,8 +18,8 @@
 // остальное
 #define endl '\n'
 
-#define CLIENT (DWORD)GetModuleHandle("client.dll")
-#define ENGINE (DWORD)GetModuleHandle("engine.dll")
+#define CLIENT (uintptr_t)GetModuleHandle("client.dll")
+#define ENGINE (uintptr_t)GetModuleHandle("engine.dll")
 
 // game const vars
 

@@ -9,6 +9,8 @@ uintptr_t __stdcall basethread(HMODULE hModule) {
 		Sleep(THREAD_DELAY);
 
 		if (GetAsyncKeyState(VK_INSERT)) {
+			PRINTDEBUG("Shutting down the application");
+			
 			pBaseApp -> setState(AppState::STOPPED);
 		}
 	}

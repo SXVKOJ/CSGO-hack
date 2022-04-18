@@ -20,7 +20,6 @@ public:
 	int m_iHealth;
 	int m_iArmor;
 	int m_iTeamNum;
-	int m_iGlowIndex;
 	int m_iFlags;
 public:
 	void forceJump();

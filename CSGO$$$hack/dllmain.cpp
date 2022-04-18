@@ -17,6 +17,8 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
         AllocConsole();
         pBaseApp->m_fConsole = freopen("CONOUT$", "w", stdout);
     }
+
+    PRINTDEBUG("Console initialized");
 	
     switch (ul_reason_for_call)
     {
