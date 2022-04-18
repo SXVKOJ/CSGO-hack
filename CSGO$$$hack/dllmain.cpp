@@ -1,4 +1,5 @@
-﻿/**
+﻿#define _CRT_SECURE_NO_WARNINGS
+/**
  * @file:       dllmain.cpp
  * 
  * @summary:    application entry point
@@ -11,6 +12,11 @@ C_BaseApp* pBaseApp = new C_BaseApp();
 BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)
 {
     pBaseApp = new C_BaseApp(hModule);
+
+    if (CSGO$$$HACK_DEBUG) {
+        AllocConsole();
+        pBaseApp->m_fConsole = freopen("CONOUT$", "w", stdout);
+    }
 	
     switch (ul_reason_for_call)
     {

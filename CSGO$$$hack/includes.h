@@ -5,8 +5,10 @@
 #define CSGO$$$HACK_INCLUDES_H_
 
 // Основные библиотеки
-#include <Windows.h>
+#include <iostream>
 #include <string>
+
+#include <Windows.h>
 
 // Внутренние файлы
 #include "allmodules.h"

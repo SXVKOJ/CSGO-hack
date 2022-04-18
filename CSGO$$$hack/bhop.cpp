@@ -3,9 +3,8 @@
 C_LocalPlayer* localPlayer = pBaseApp->getLocalPlayer();
 
 void modules::bhop::update() {
-	if (!localPlayer)
-		return;
-	if (!localPlayer->isAlive())
+	std::cout << 1 << endl;
+	if (not localPlayer->isAlive())
 		return;
 	
 	localPlayer->update();

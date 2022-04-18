@@ -38,6 +38,10 @@ private:
 	HMODULE m_hModule;
 	AppState m_state;
 	C_LocalPlayer m_localPlayer;
+#if CSGO$$$HACK_DEBUG
+public:
+	FILE* m_fConsole;
+#endif
 private:
 	// Словарь для получения адресов по имени модуля
 	std::map<std::string, void*> m_mapFunctions;
@@ -56,6 +60,7 @@ public:
 public:
 	C_BaseApp();
 	C_BaseApp(HMODULE hModule);
+	~C_BaseApp();
 };
 
 // определен в dllmain.cpp
