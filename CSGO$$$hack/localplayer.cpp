@@ -17,11 +17,14 @@ C_LocalPlayer::C_LocalPlayer() {
 
 void C_LocalPlayer::update() {
 	m_dwBase = *(uintptr_t*)(CLIENT + offsets::dwLocalPlayer);
-	m_iHealth = *(int*)(m_dwBase + offsets::m_iHealth);
-	m_iArmor = *(int*)(m_dwBase + offsets::m_ArmorValue);
-	m_iFlags = *(int*)(m_dwBase + offsets::m_fFlags);
-	m_iGlowIndex = *(int*)(m_dwBase + offsets::m_iGlowIndex);
-	m_iTeamNum = *(int*)(m_dwBase + offsets::m_iTeamNum);
+
+	if (m_dwBase) {
+		m_iHealth = *(int*)(m_dwBase + offsets::m_iHealth);
+		m_iArmor = *(int*)(m_dwBase + offsets::m_ArmorValue);
+		m_iFlags = *(int*)(m_dwBase + offsets::m_fFlags);
+		m_iGlowIndex = *(int*)(m_dwBase + offsets::m_iGlowIndex);
+		m_iTeamNum = *(int*)(m_dwBase + offsets::m_iTeamNum);
+	}
 }
 
 void C_LocalPlayer::forceJump() {

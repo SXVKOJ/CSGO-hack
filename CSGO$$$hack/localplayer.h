@@ -27,7 +27,7 @@ public:
 	void forceShoot();
 	bool isAlive();
 public:
-	// обновляет все внутренние переменные
+	// обновляет все внутреигровые переменные
 	void update();
 public:
 	C_LocalPlayer();
