@@ -1,14 +1,19 @@
 #pragma once
 // Файл отвечает за включение всех нужных библиотек и внутренних файлов
 
-#ifndef CSGO$$$hack_INCLUDES_H_
-#define CSGO$$$hack_INCLUDES_H_
+#ifndef CSGO$$$HACK_INCLUDES_H_
+#define CSGO$$$HACK_INCLUDES_H_
 
+// Основные библиотеки
 #include <Windows.h>
+#include <string>
 
-#include "config.h"
+// Внутренние файлы
+#include "allmodules.h"
+#include "defines.h"
 #include "offsets.h"
 
-#include "basethread.h"
+#include "localplayer.h"
+#include "baseapp.h"
 
 #endif // !CSGO$$$hack_INCLUDES_H_

@@ -13,54 +13,51 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Исходные файлы\basethread">
-      <UniqueIdentifier>{ce3b4f6c-3556-417a-ad3e-203a1e2ce81f}</UniqueIdentifier>
+    <Filter Include="Исходные файлы\main">
+      <UniqueIdentifier>{2b0a35f2-880b-40b7-9303-47920d179170}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\localplayer">
+      <UniqueIdentifier>{1e8a66e2-7f49-4b7d-8430-474ce903de34}</UniqueIdentifier>
     </Filter>
     <Filter Include="Исходные файлы\modules">
-      <UniqueIdentifier>{e0fcc05a-c5ef-4f2f-9bfc-976fd1cfd77c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Исходные файлы\config">
-      <UniqueIdentifier>{9b4087ad-45ef-4064-b91b-c56cf8a437e3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Исходные файлы\modules\glowesp">
-      <UniqueIdentifier>{d894b574-6e58-4fe5-9b98-a49a9ef272b5}</UniqueIdentifier>
+      <UniqueIdentifier>{f2b03480-2f12-4c38-ad69-31b992641314}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="baseapp.cpp">
+      <Filter>Исходные файлы\main</Filter>
+    </ClCompile>
     <ClCompile Include="basethread.cpp">
-      <Filter>Исходные файлы\basethread</Filter>
+      <Filter>Исходные файлы\main</Filter>
     </ClCompile>
-    <ClCompile Include="keyboardhandler.cpp">
-      <Filter>Исходные файлы</Filter>
+    <ClCompile Include="localplayer.cpp">
+      <Filter>Исходные файлы\localplayer</Filter>
     </ClCompile>
-    <ClCompile Include="callmodulemethods.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-    <ClCompile Include="config.cpp">
-      <Filter>Исходные файлы\config</Filter>
-    </ClCompile>
-    <ClCompile Include="glowesp.cpp">
-      <Filter>Исходные файлы\modules\glowesp</Filter>
+    <ClCompile Include="bhop.cpp">
+      <Filter>Исходные файлы\modules</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="basethread.h">
-      <Filter>Исходные файлы\basethread</Filter>
-    </ClInclude>
     <ClInclude Include="includes.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="offsets.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="config.h">
-      <Filter>Исходные файлы\config</Filter>
+    <ClInclude Include="baseapp.h">
+      <Filter>Исходные файлы\main</Filter>
     </ClInclude>
-    <ClInclude Include="glowesp.h">
-      <Filter>Исходные файлы\modules\glowesp</Filter>
+    <ClInclude Include="localplayer.h">
+      <Filter>Исходные файлы\localplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="defines.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="allmodules.h">
+      <Filter>Исходные файлы\modules</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

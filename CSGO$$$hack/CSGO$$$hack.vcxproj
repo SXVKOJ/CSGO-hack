@@ -152,17 +152,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="basethread.cpp" />
-    <ClCompile Include="callmodulemethods.cpp" />
-    <ClCompile Include="config.cpp" />
+    <ClCompile Include="bhop.cpp" />
     <ClCompile Include="dllmain.cpp" />
-    <ClCompile Include="glowesp.cpp" />
-    <ClCompile Include="keyboardhandler.cpp" />
+    <ClCompile Include="baseapp.cpp" />
+    <ClCompile Include="localplayer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="basethread.h" />
-    <ClInclude Include="config.h" />
-    <ClInclude Include="glowesp.h" />
+    <ClInclude Include="allmodules.h" />
+    <ClInclude Include="defines.h" />
     <ClInclude Include="includes.h" />
+    <ClInclude Include="baseapp.h" />
+    <ClInclude Include="localplayer.h" />
     <ClInclude Include="offsets.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
