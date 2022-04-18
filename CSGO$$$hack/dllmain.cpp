@@ -13,10 +13,10 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD ul_reason_for_call, LPVOID lpReserv
 {
     pBaseApp = new C_BaseApp(hModule);
 
-    if (CSGO$$$HACK_DEBUG) {
-        AllocConsole();
-        pBaseApp->m_fConsole = freopen("CONOUT$", "w", stdout);
-    }
+#if CSGO$$$HACK_DEBUG
+    AllocConsole();
+    pBaseApp->m_fConsole = freopen("CONOUT$", "w", stdout);
+#endif // CSGO$$$HACK_DEBUG
 
     PRINTDEBUG("Console initialized");
 	

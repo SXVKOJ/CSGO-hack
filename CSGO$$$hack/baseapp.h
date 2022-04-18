@@ -41,7 +41,7 @@ private:
 #if CSGO$$$HACK_DEBUG
 public:
 	FILE* m_fConsole;
-#endif
+#endif // !CSGO$$$HACK_DEBUG
 private:
 	// Словарь для получения адресов по имени модуля
 	std::map<std::string, void*> m_mapFunctions;

@@ -6,7 +6,7 @@
 #define CSGO$$$HACK_DEFINES_H_
 
 #define CSGO$$$HACK_VERSION_MAJOR 1
-#define CSGO$$$HACK_DEBUG 1
+#define CSGO$$$HACK_DEBUG 0
 
 #define PRINTDEBUG(_message) if (CSGO$$$HACK_DEBUG) {std::cout << _message << endl;}
 

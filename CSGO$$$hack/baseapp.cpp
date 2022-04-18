@@ -20,13 +20,13 @@ C_BaseApp::C_BaseApp(HMODULE hModule) {
 }
 
 C_BaseApp::~C_BaseApp() {
-	if (CSGO$$$HACK_DEBUG) {
-		std::cout << "Stopping all modules..." << endl;
+#if CSGO$$$HACK_DEBUG 
+	std::cout << "Stopping all modules..." << endl;
 
-		if (m_fConsole != nullptr) {
-			fclose(m_fConsole);
-		}
+	if (m_fConsole != nullptr) {
+		fclose(m_fConsole);
 	}
+#endif // !CSGO$$$HACK_DEBUG
 }
 
 void C_BaseApp::runModule(const std::string &moduleName) {
@@ -48,13 +48,13 @@ void C_BaseApp::run() {
 void C_BaseApp::stop() {
 	m_state = AppState::STOPPED;
 
-	if (CSGO$$$HACK_DEBUG) {
-		std::cout << "Stopping all modules..." << endl;
+#if CSGO$$$HACK_DEBUG 
+	std::cout << "Stopping all modules..." << endl;
 
-		if (m_fConsole != nullptr) {
-			fclose(m_fConsole);
-		}
+	if (m_fConsole != nullptr) {
+		fclose(m_fConsole);
 	}
+#endif // !CSGO$$$HACK_DEBUG
 }
 
 // Вызывает внешние модули чита (например glowesp, aimthread)
