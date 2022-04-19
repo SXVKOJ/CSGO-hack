@@ -1,3 +1,6 @@
+#include <Windows.h>
+#include "vec.h"
+
 /*+===================================================================
 * @file:		localplayer.h
 * 
@@ -21,11 +24,21 @@ public:
 	int m_iArmor;
 	int m_iTeamNum;
 	int m_iFlags;
+	int m_iShotsFired;
+	int m_iCrosshairId;
 	Vec3 m_vVelocity;
 	Vec3 m_vOrigin;
+	float m_flFlashDuration;
 public:
 	void forceJump();
 	void forceShoot();
+	void forceForward();
+	void forceBackward();
+	void forceLeft();
+	void forceRight();
+	
+	void resetFlashDuration();
+	
 	bool isAlive();
 public:
 	// обновляет все внутреигровые переменные

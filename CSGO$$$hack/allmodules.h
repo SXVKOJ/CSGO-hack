@@ -13,6 +13,9 @@ namespace modules {
 	namespace bhop {
 		extern void update();
 	}
+	namespace noflash {
+		extern void update();
+	}
 }
 
 #endif

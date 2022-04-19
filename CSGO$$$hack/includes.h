@@ -10,15 +10,16 @@
 
 #include <Windows.h>
 
+// utils
+#include "vec.h"
+
 // Внутренние файлы
 #include "allmodules.h"
 #include "defines.h"
 #include "offsets.h"
 
-// utils
-#include "vec.h"
-
 #include "localplayer.h"
+#include "entity.h"
 #include "baseapp.h"
 
 #endif // !CSGO$$$hack_INCLUDES_H_

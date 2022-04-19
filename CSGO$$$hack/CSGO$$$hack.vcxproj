@@ -155,7 +155,10 @@
     <ClCompile Include="bhop.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="baseapp.cpp" />
+    <ClCompile Include="entity.cpp" />
+    <ClCompile Include="entity.h" />
     <ClCompile Include="localplayer.cpp" />
+    <ClCompile Include="noflash.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="allmodules.h" />

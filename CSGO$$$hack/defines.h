@@ -24,6 +24,7 @@
 // game const vars
 
 namespace CSGO {
+	constexpr int PLAYER_SIZE = 0x10;
 	constexpr int MAX_PLAYERS = 64;
 	constexpr int FLAG_ON_GROUND = 257;
 	constexpr int FLAG_IN_AIR = 256;

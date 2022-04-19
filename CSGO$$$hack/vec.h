@@ -65,6 +65,10 @@ public:
 	Vec3 operator/(float f) const {
 		return Vec3(x / f, y / f, z / f);
 	}
+
+	bool operator==(const Vec3& v) const {
+		return x == v.x && y == v.y && z == v.z;
+	}
 };
 
 #endif // !CSGO$$$HACK_VEC_H_

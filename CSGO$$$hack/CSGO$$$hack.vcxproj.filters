@@ -25,6 +25,9 @@
     <Filter Include="Исходные файлы\utils">
       <UniqueIdentifier>{6378440e-a115-4749-a272-82f566eada02}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\entity">
+      <UniqueIdentifier>{091a384f-fe55-48f6-ae97-e577bdfd1e66}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -41,6 +44,15 @@
     </ClCompile>
     <ClCompile Include="bhop.cpp">
       <Filter>Исходные файлы\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="noflash.cpp">
+      <Filter>Исходные файлы\modules</Filter>
+    </ClCompile>
+    <ClCompile Include="entity.h">
+      <Filter>Исходные файлы\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="entity.cpp">
+      <Filter>Исходные файлы\entity</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
