@@ -15,6 +15,9 @@
 #include "defines.h"
 #include "offsets.h"
 
+// utils
+#include "vec.h"
+
 #include "localplayer.h"
 #include "baseapp.h"
 

@@ -69,11 +69,11 @@ AppState C_BaseApp::getState() {
 	return m_state;
 }
 
-C_LocalPlayer* C_BaseApp::getLocalPlayer() {
-	return &m_localPlayer;
-}
-
 // C_BaseApp setters
 void C_BaseApp::setState(const AppState state) {
 	m_state = state;
+}
+
+void C_Game::update() {
+	m_localPlayer.update();
 }

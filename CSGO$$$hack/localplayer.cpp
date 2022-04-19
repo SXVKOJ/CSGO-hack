@@ -22,6 +22,8 @@ void C_LocalPlayer::update() {
 		m_iArmor = *(int*)(m_dwBase + offsets::m_ArmorValue);
 		m_iFlags = *(int*)(m_dwBase + offsets::m_fFlags);
 		m_iTeamNum = *(int*)(m_dwBase + offsets::m_iTeamNum);
+		m_vVelocity = *(Vec3*)(m_dwBase + offsets::m_vecVelocity);
+		m_vOrigin = *(Vec3*)(m_dwBase + offsets::m_vecOrigin);
 	}
 }
 

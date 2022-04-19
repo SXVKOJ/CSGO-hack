@@ -164,6 +164,7 @@
     <ClInclude Include="baseapp.h" />
     <ClInclude Include="localplayer.h" />
     <ClInclude Include="offsets.h" />
+    <ClInclude Include="vec.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

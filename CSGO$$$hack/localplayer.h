@@ -21,6 +21,8 @@ public:
 	int m_iArmor;
 	int m_iTeamNum;
 	int m_iFlags;
+	Vec3 m_vVelocity;
+	Vec3 m_vOrigin;
 public:
 	void forceJump();
 	void forceShoot();

@@ -22,6 +22,9 @@
     <Filter Include="Исходные файлы\modules">
       <UniqueIdentifier>{f2b03480-2f12-4c38-ad69-31b992641314}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\utils">
+      <UniqueIdentifier>{6378440e-a115-4749-a272-82f566eada02}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -58,6 +61,9 @@
     </ClInclude>
     <ClInclude Include="allmodules.h">
       <Filter>Исходные файлы\modules</Filter>
+    </ClInclude>
+    <ClInclude Include="vec.h">
+      <Filter>Исходные файлы\utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

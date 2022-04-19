@@ -1,10 +1,8 @@
 #include "includes.h"
 
-C_LocalPlayer localPlayer;
+#define localPlayer pBaseApp->m_game.m_localPlayer
 
 void modules::bhop::update() {
-	localPlayer.update();
-
 	if (not localPlayer.isAlive())
 		return;
 	

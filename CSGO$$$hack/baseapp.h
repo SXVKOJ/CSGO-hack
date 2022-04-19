@@ -21,8 +21,10 @@
 #ifndef CSGO$$$HACK_MAIN_H_
 #define CSGO$$$HACK_MAIN_H_
 
+// определен в basethread.cpp
 uintptr_t __stdcall basethread(HMODULE hModule);
 
+// Опрелен в baseapp.cpp
 namespace moduleConfig {
 	extern bool bhop;
 }
@@ -33,13 +35,21 @@ enum class AppState {
 	STOPPED
 };
 
+class C_Game {
+public:
+	C_LocalPlayer m_localPlayer{};
+public:
+	// Обновляет значение всех переменных подчиненных классов
+	void update();
+};
+
 class C_BaseApp {
 private:
-	HMODULE m_hModule;
+	HMODULE  m_hModule;
 	AppState m_state;
-	C_LocalPlayer m_localPlayer;
-#if CSGO$$$HACK_DEBUG
 public:
+	C_Game	 m_game{};
+#if CSGO$$$HACK_DEBUG
 	FILE* m_fConsole;
 #endif // !CSGO$$$HACK_DEBUG
 private:
@@ -52,9 +62,10 @@ public:
 	void run();
 	void stop();
 	void callExternalMethods();
+public:
 	// getters
 	AppState getState();
-	C_LocalPlayer* getLocalPlayer();
+public:
 	// setters
 	void setState(const AppState state);
 public:

@@ -1,7 +1,7 @@
 #pragma once
 
 /**
- * @file:  allmodules.h
+ * @file:    allmodules.h
  * 
  * @Summary: File contains all external modules used in the project
  */
